@@ -12,35 +12,46 @@
         $baduser = false; //no errors
 
 
-        //check if name was entered
+        //check if fields were entered
         if(empty($first_name)) {
-            echo "Please enter your first name";
+            echo "Please enter your first name <br>";
             $baduser = true;
         }
 
         if(empty($last_name)) {
-            echo "Please enter your last name";
+            echo "Please enter your last name <br>";
             $baduser = true;
         }
 
         if(empty($email)) {
-            echo "Please enter your email address";
+            echo "Please enter your email address <br>";
             $baduser = true;
         }
 
         if(empty($password)) {
-            echo "Please enter your password";
+            echo "Please enter your password <br>";
             $baduser = true;
         }
 
         if(empty($confirm_password)) {
-            echo "Please confirm your password";
+            echo "Please confirm your password <br>";
             $baduser = true;
         }
 
         if($password !== $confirm_password) {
-            echo "Passwords do not match";
+            echo "Passwords do not match <br>";
             $baduser = true;
+        }
+
+
+        //Check if username is already in database
+        $sql = "SELECT email FROM users WHERE email = '$email'";
+        $result = mysqli_query($conn, $sql);
+
+        if(!$baduser) { //everything passed. no errors
+           // echo "User registered successfully";
+
+
         }
 
 

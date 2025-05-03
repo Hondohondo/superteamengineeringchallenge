@@ -1,8 +1,4 @@
-<?php
-include 'header.php';
-?>
-
-
+<?php include 'includes/header.php'; ?>
 <main class="container" id="content">
     <h1 class="heading-one">Register</h1>
     <form action="register_process.php" method="post" class="register-form">
@@ -30,8 +26,4 @@ include 'header.php';
         <input type="submit" value="Register">
     </form>
 </main>
-
-
-<?php
-include 'footer.php';
-?>
+<?php include 'includes/footer.php';
