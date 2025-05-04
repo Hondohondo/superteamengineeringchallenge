@@ -1,5 +1,8 @@
 <?php
 
+    //Connect to the database
+    require_once 'includes/database-connection.php';
+
     if($_SERVER['REQUEST_METHOD'] === 'POST') { //check if the form was posted
         //Get form data
         $first_name = $_POST['first-name'] ?? null;
@@ -47,6 +50,8 @@
         //Check if username is already in database
         $sql = "SELECT email FROM users WHERE email = '$email'";
         $result = mysqli_query($conn, $sql);
+
+
 
         if(!$baduser) { //everything passed. no errors
            // echo "User registered successfully";

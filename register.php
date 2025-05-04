@@ -1,7 +1,7 @@
 <?php include 'includes/header.php'; ?>
 <main class="container" id="content">
     <h1 class="heading-one">Register</h1>
-    <form action="register_process.php" method="post" class="register-form">
+    <form action="register-process.php" method="post" class="register-form">
         <div>
             <label for="first-name">First Name:</label> <br>
             <input type="text" name="first-name" id="first-name">
